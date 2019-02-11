@@ -9,6 +9,7 @@ ModeBase* modes[6];
 float height_at_ground;
 
 void ModeInit() {
+  //配列の番号とRocketModeの番号が一致している
   modes[0] = (ModeBase*)new ModeSetting();
   modes[1] = (ModeBase*)new ModeReady();
   modes[2] = (ModeBase*)new ModeBurning();
