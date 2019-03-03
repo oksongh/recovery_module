@@ -66,8 +66,8 @@ void loop() {
 
 #ifdef BATTERY_TEST
   // TODO: バッテリー試験
-  outputs.is_1st_servo_open ^= (sensors.time_ms / (30 * 60 * 1000) ) % 2 == 0;
-  outputs.is_2nd_servo_open ^= (sensors.time_ms / (30 * 60 * 1000) ) % 2 == 0;
+  outputs.is_1st_servo_open ^= (long)(sensors.time_ms / (30 * 60 * 1000) ) % 2 == 0;
+  outputs.is_2nd_servo_open ^= (long)(sensors.time_ms / (30 * 60 * 1000) ) % 2 == 0;
 #endif
 
   // 出力
